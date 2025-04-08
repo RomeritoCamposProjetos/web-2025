@@ -1,0 +1,144 @@
+/* @theme psi */
+
+@import "default";
+
+* {
+    list-style-type: none;
+}
+
+:root {
+    --primary: #fff;
+    --background: #fff;
+    --secondary: #fff
+}
+
+section {
+    display: flex;
+    flex-flow: column;    
+    background-color: rgb(237, 237, 237);        
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: bolder;        
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: bolder; 
+    color: black;
+}
+
+h3 {
+    font-size: 1.25em;
+    font-weight: bold; 
+}
+
+/*Centralizar título*/
+section:has(h1) {
+    justify-content: center;
+    align-items: center;    
+}
+
+section:has(h2) {
+    justify-content: flex-start;
+}
+
+section:has(h1) footer {    
+    width: 100%;
+    text-align: center;
+    content: 'romerito';
+}
+
+
+ul li::marker {
+    font-size: 1.5em;
+    content: '\219D  ';    
+    background-color: transparent;
+    color: blue;    
+}
+
+ul li {
+    padding: 0;
+    margin: 0;
+}
+table, th, td {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+th, tr {
+    font-size: 0.8em;   
+    border: 1px solid black; 
+}
+th {
+    background-color: black;
+    color: white;
+}
+
+td:first-of-type {
+    color: black;
+    background-color: #92d050;
+}
+
+td:nth-of-type(2) {
+    text-align: center;
+    background-color: #d9d9d9;
+}
+
+td:nth-of-type(3) {
+    text-align: center;
+    background-color: #f3f3f3;
+}
+
+td > strong {
+    color: blue
+}
+
+td > em {
+    color: red;
+    font-weight: bold;
+}
+
+
+/* Regras para Figura com Legenda */
+div.wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0;
+    align-items: center;    
+}
+
+div.wrapper p {
+    font-size: 18px;
+}
+
+div.wrapper p {
+    font-weight: bolder;
+}
+
+p.nota:before {
+    content: "\00270D ";
+    width: 40px;
+    height: 40px;
+    position: absolute;   
+    top: -27px;
+    left: -13px;
+    transform: rotate(-30deg) scale(1.5);
+}
+
+p.nota {
+    position: relative;
+    background-color: rgb(244, 244, 186);
+    padding: 5px 10px; 
+    font-size: 20px; 
+    width: 350px;
+    text-align: justify;
+    border: 1px solid rgb(112, 112, 112);
+    border-radius: 5px;
+}
+
+p.nota a::before {
+    content: "\01F517 ";
+}
