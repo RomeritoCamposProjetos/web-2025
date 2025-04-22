@@ -142,3 +142,21 @@ p.nota {
 p.nota a::before {
     content: "\01F517 ";
 }
+
+pre {
+    position: relative;
+}
+pre::before {
+    position: absolute;
+    content: 'Exemplo';
+    top: -17px;
+    right: -5px;
+    background-color: rgb(255, 255, 119);
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+code {
+    background-color: rgb(252, 204, 212);
+}
+
