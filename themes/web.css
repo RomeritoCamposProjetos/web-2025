@@ -114,6 +114,11 @@ div.wrapper p {
     font-size: 18px;
 }
 
+div.wrapper img {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
 div.wrapper p {
     font-weight: bolder;
 }
@@ -136,7 +141,7 @@ p.nota {
     width: 350px;
     text-align: justify;
     border: 1px solid rgb(112, 112, 112);
-    border-radius: 5px;
+    border-radius: 5px;    
 }
 
 p.nota a::before {
