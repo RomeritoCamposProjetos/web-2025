@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Nomes</title>
+</head>
+<body>
+    <h1>Adicionar Nome</h1>
+    <form method="post">
+        <input type="text" name="nome" placeholder="Digite seu nome" required>
+        <button type="submit">Adicionar</button>
+    </form>
+
+    <h2>Nomes adicionados:</h2>
+    <ul>
+        {% for nome in nomes %}
+            <li>{{ nome }}</li>
+        {% else %}
+            <li>Nenhum nome adicionado.</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{{ url_for('limpar') }}">Limpar Lista</a>
+</body>
+</html>
