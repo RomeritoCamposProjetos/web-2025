@@ -17,6 +17,7 @@ A linguagem adotada será Python. Um framework será adotado com objetivo de apr
 ## Slides
 
 - [Bimestre 1](./pages/bimestre1.md)
+- [Bimestre 2](./pages/bimestre2.md)
 
 ## Horários
 
