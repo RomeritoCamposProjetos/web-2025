@@ -1,0 +1,134 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f8;
+    color: #333;
+    padding: 2rem;
+}
+
+.container {
+    /* max-width: 900px; */
+    margin: 0 20%;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+
+h2 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    color: #34495e;
+}
+
+.row {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.column .p {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    margin-bottom: 1rem;    
+    border-radius: 6px;
+}
+
+.p.title {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.pass {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.cripto {
+    font-family: monospace;
+    background: #eef2f3;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 0.3rem;
+}
+
+.row form {
+    flex-direction: row;
+}
+
+.row form input {
+    flex: 1;
+}
+
+.adivinhar form {
+    flex-direction: row;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    margin-top: 0.5rem;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 0.6rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    transition: border 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+input[type="submit"] {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.6rem;
+    border-radius: 6px;
+    cursor: pointer;
+    /* width: 50%; */
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+.success {
+    color: #27ae60;
+    font-weight: bold;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 1rem;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="submit"] {
+        width: 100%;
+    }
+}
