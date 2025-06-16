@@ -14,10 +14,6 @@ login_manager.init_app(app)
 # 3 - ncessário adicionar uma chave secreta para aplicaçãos
 app.config['SECRET_KEY'] = 'ULTRAMEGADIFICIL'
 
-# with app.app_context():
-#     if 'usuarios' not in session:
-#         session['usuarios'] = {}
-
 # 4-  Função utilizada para carregar o usuário da sessão (logado)
 @login_manager.user_loader
 def load_user(user_id):
