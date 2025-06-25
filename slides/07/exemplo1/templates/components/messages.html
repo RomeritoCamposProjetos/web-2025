@@ -1,0 +1,23 @@
+<!-- templates/components/messages.html -->
+
+{% with errors = get_flashed_messages(category_filter=["error"]) %}
+
+{% if errors %}
+  {% for msg in errors %}
+    <div class="error">{{ msg }}</div>  
+  {% endfor %}
+{% endif %}
+
+{% endwith %}
+
+
+{% with success = get_flashed_messages(category_filter=["success"]) %}
+
+{% if success %}
+  {% for msg in success %}
+    <div class="success">{{ msg }}</div>  
+  {% endfor %}
+{% endif %}
+
+{% endwith %}
+

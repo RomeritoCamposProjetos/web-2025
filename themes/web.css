@@ -45,6 +45,10 @@ section:has(h2) {
     justify-content: flex-start;
 }
 
+section:has(h3) {
+    justify-content: flex-start;
+}
+
 section:has(h1) footer {    
     width: 100%;
     text-align: center;

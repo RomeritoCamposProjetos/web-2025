@@ -1,0 +1,14 @@
+## ✅ **Critérios de Avaliação**
+
+| Critério                                                             | Pontuação |
+| -------------------------------------------------------------------- | --------- |
+| Estrutura correta do projeto (templates, static)                     | 1,0       |
+| Cadastro e login funcionais com uso de `session`                     | 1,5       |
+| Implementação do carrinho de compras para cada usuário com `session` | 2,0       |
+| Utilização de `cookies` para saudação personalizada                  | 1,0       |
+| Sistema de logout funcional                                          | 0,5       |
+| Estilização correta com arquivos CSS via `static`                    | 1,0       |
+| Criptografia das senhas implementada                                 | 2,0       |
+| Arquivo `requirements.txt` completo e correto                        | 1,0       |
+
+**Total: 10 pontos**
