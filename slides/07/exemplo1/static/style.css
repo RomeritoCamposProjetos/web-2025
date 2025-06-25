@@ -1,0 +1,78 @@
+/* static/style.css */
+
+body {
+  background-color: #f4f6f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header, footer {
+  background-color: #0066cc;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  margin: 40px auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-top: 0;
+  color: #333;
+  text-align: center;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #004a99;
+}
+
+.success {
+  background-color: #dff0d8;
+  color: #3c763d;
+  border-left: 6px solid #3c763d;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+}
+
+.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border-left: 6px solid #721c24;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+}

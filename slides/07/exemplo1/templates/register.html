@@ -1,0 +1,17 @@
+<!-- templates/register.html -->
+{% extends "base.html" %}
+
+{% block title %}Cadastro{% endblock %}
+
+{% block content %}
+<h2>Cadastro</h2>
+
+{% include 'components/messages.html'%}
+
+<form method="POST" action="/register">
+  <input type="text" name="username" placeholder="Usuário">
+  <input type="email" name="email" placeholder="Email">
+  <input type="password" name="password" placeholder="Senha">
+  <button type="submit">Cadastrar</button>
+</form>
+{% endblock %}
