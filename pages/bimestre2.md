@@ -18,4 +18,5 @@ Nesta página, você tem acesso aos slides ou outros materias da disciplina.
   - [Distribuição de Pontuação](../proposta/pontuação.pdf)
   - [Detalhamento sobre a correção](../proposta/rubrica.pdf)
   - [Exemplo de documento de requisitos](../proposta/doc_requisitos.pdf)
+
 ## Atividades
