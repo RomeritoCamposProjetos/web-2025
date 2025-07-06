@@ -1,5 +1,5 @@
 ---
-title: Primeiro Bimestre
+title: Segundo Bimestre
 layout: page
 ---
 
