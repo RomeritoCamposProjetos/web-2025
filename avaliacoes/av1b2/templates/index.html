@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lanchonete Escolar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <div class="prato"></div>
+            <div class="talher garfo"></div>
+            <div class="talher faca"></div>
+        </div>
+        <h1 class="titulo-pagina">Lanchonete Escolar</h1>
+    </nav>
+
+    <!-- Conteúdo principal -->
+    <main class="conteudo">
+        <h2>Comidas Disponíveis</h2>
+
+        {% if comidas %}
+            <ul>
+                {% for nome, dados in comidas.items() %}
+                    <li>
+                        <b>{{ nome }}</b> - R$ {{ "%.2f"|format(dados["valor"]) }}
+                        ({{ dados["pessoas_por_porcao"] }} pessoa{{ 's' if dados["pessoas_por_porcao"] > 1 else '' }} por porção)
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p class="mensagem-vazia">Nenhuma comida cadastrada ainda.</p>
+        {% endif %}
+
+        <a class="botao" href="{{ url_for('cadastrar') }}">Cadastrar nova comida</a>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <p>&copy; {{ 2025 }} Lanchonete Escolar - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

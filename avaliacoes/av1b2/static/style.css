@@ -1,0 +1,217 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f8f9fa;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    background-color: #27ae60;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centraliza título */
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.logo {
+    position: absolute;
+    left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* Logo de comida com prato e talheres */
+.prato {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    border: 3px solid #2c3e50;
+    position: relative;
+}
+
+.talher {
+    width: 6px;
+    height: 20px;
+    background-color: #2c3e50;
+    margin-left: 3px;
+}
+
+.garfo {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.faca {
+    transform: rotate(-10deg);
+}
+
+.titulo-pagina {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+/* ===== Conteúdo ===== */
+.conteudo {
+    margin-top: 80px; /* espaço por causa da navbar */
+    min-height: calc(100vh - 140px); /* altura total - navbar - rodapé */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #ecf0f1;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 5px;
+    width: 250px;
+    text-align: center;
+}
+
+.mensagem-vazia {
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+.botao, button {
+    display: inline-block;
+    padding: 8px 14px;
+    margin-top: 10px;
+    background-color: #27ae60;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.botao:hover, button:hover {
+    background-color: #219150;
+}
+
+/* ===== Rodapé ===== */
+.rodape {
+    background-color: #27ae60;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* animaçao logo */
+/* ===== Logo Animada ===== */
+@keyframes girarPrato {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes balancarTalher {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(15deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.prato {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    border: 3px solid #2c3e50;
+    position: relative;
+    animation: girarPrato 3s ease-in-out infinite;
+}
+
+.talher {
+    width: 6px;
+    height: 20px;
+    background-color: #2c3e50;
+    margin-left: 3px;
+    animation: balancarTalher 2.5s ease-in-out infinite;
+}
+
+.faca {
+    transform-origin: top center;
+}
+
+.garfo {
+    transform-origin: top center;
+}
+
+
+/* fomrulário */
+/* ===== Formulário em Card ===== */
+.formulario {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.08); /* borda bem suave */
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.formulario input {
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.formulario button {
+    padding: 10px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.formulario button:hover {
+    background-color: #219150;
+}
+
+/* estilo link */
+/* Link "Voltar" estilizado */
+.link-voltar {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 14px;
+    background: #f0f0f0;
+    border-radius: 6px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.link-voltar:hover {
+    background: #ff9800;
+    color: white;
+    border-color: #ff9800;
+}
