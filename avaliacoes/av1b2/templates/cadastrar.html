@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar Comida</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <div class="prato"></div>
+            <div class="talher garfo"></div>
+            <div class="talher faca"></div>
+        </div>
+        <h1 class="titulo-pagina">Lanchonete Escolar</h1>
+    </nav>
+
+    <!-- Conteúdo principal -->
+    <main class="conteudo">
+        <h2>Cadastrar Comida</h2>
+        <form method="POST" class="formulario">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="valor">Valor (R$):</label>
+            <input type="number" step="0.01" id="valor" name="valor" required>
+
+            <label for="pessoas_por_porcao">Quantidade de pessoas por porção:</label>
+            <input type="number" id="pessoas_por_porcao" name="pessoas_por_porcao" required>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+
+        <a class="link-voltar" href="{{ url_for('index') }}">Voltar para a lista</a>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <p>&copy; {{ 2025 }} Lanchonete Escolar - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
