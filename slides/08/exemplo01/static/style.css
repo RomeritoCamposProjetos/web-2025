@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Khula:wght@400;600&family=Kavoon&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Khula', sans-serif;
+    background: linear-gradient(135deg, #1621f0, #8f94fb, #aef4f4);    
+    color: #333;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: auto 10%;
+}
+
+@media screen and (min-width: 1440px) {
+    .container {
+        margin: auto 15%;
+    }
+}
+
+/* Scrollbar customizado */
+.painel::-webkit-scrollbar {
+  width: 10px;
+}
+
+.painel::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+}
+
+.painel::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #4e54c8, #8f94fb);
+  border-radius: 10px;
+}
+
+.painel::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #3c42a0, #6e73d6);
+}
+
+/* Firefox */
+.painel {
+  scrollbar-width: thin;
+  scrollbar-color: #6e73d6 rgba(255,255,255,0.1);
+}
+
+
+/* NAV */
+nav {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 40px; /* margem lateral */
+    /* background: rgba(255,255,255,0.1); */
+    backdrop-filter: blur(6px);
+    height: 150px;    
+}
+
+nav h1 {
+    font-family: 'Kavoon', cursive;
+    font-size: 3.5rem;
+    color: #fff;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #fff;
+    transition: opacity 0.3s;
+}
+
+nav ul li a:hover {
+    opacity: 0.7;
+}
+
+/* Painel com rolagem */
+.painel {
+    flex: 1; /* ocupa todo o espaço abaixo da nav */
+    overflow-y: auto;
+    padding: 20px 40px; /* margem lateral */
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Cards */
+.card {
+    position: relative;
+    background: #282FBD;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+/* Imagem */
+.card .book-img {
+    width: 30%;
+    height: 220px;
+    background: #ddd;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/* Conteúdo */
+
+.card .body {
+    position: relative;
+    color: white;
+    background-color: #4e54c8;
+    display: flex;   
+    flex-direction: column;
+    flex: 1;
+    border-radius: 5px;
+}
+  
+.card .body h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+}
+
+.card .body p {
+    font-size: 1rem;
+    color: #555;
+    text-align: justify;
+    margin-bottom: 40px;
+    color: white;
+}
+
+/* Botão */
+.card .body .btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: #0077ff;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.card .body .btn:hover {
+  background: #005bcc;
+}
+
+
+/* Formulário */
+.form-card {
+  background: #282FBD;
+  border-radius: 5px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  max-width: 600px;
+  margin: 0 auto;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.form-card label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.form-card input,
+.form-card textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.form-card input[type="file"] {
+  background: #fff;
+  color: #333;
+}
+
+.btn-submit {
+  background: #0077ff;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+.btn-submit:hover {
+  background: #005bcc;
+}
