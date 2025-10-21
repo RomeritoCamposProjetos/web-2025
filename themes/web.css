@@ -169,3 +169,7 @@ code {
     background-color: rgb(252, 204, 212);
 }
 
+p, li{
+    margin:0;
+    padding:0;
+}
