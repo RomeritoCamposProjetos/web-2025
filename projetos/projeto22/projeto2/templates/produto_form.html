@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}{{ "Editar" if product else "Novo" }} Produto - Minha Loja{% endblock %}
+{% block content %}
+  <div class="form-container">
+    <h2>{{ "Editar" if product else "Novo" }} Produto</h2>
+    <form action="{{ url_for('edit_product') if product else url_for('create_product') }}" method="post" class="form">
+      <label for="nome">Nome</label>
+      <input id="nome" name="nome" type="text" required maxlength="150" value="{{ product.nome if product else request.form.nome or '' }}">
+
+      <label for="preco">Preço (R$)</label>
+      <input id="preco" name="preco" type="number" step="0.01" min="0" required value="{{ product.preco if product else request.form.preco or '' }}">
+
+      <label for="descricao">Descrição</label>
+      <textarea id="descricao" name="descricao" rows="4" maxlength="600">{{ product.descricao if product else request.form.descricao or '' }}</textarea>
+
+      <div class="form-row">
+        <button class="btn" type="submit">{{ "Salvar" if product else "Criar" }}</button>
+        <a class="link muted" href="{{ url_for('products') }}">Cancelar</a>
+      </div>
+    </form>
+  </div>
+{% endblock %}

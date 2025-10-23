@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Início - Minha Loja{% endblock %}
+{% block content %}
+  <section class="hero">
+    <h1>Bem-vindo à Minha Loja</h1>
+    <p>Projeto exemplo com Flask + SQLAlchemy. Gerencie usuários e produtos.</p>
+    <div class="actions">
+      <a class="btn" href="{{ url_for('products') }}">Ver produtos</a>
+      {% if not current_user %}
+        <a class="btn outline" href="{{ url_for('login') }}">Entrar</a>
+      {% endif %}
+    </div>
+  </section>
+
+  <section class="intro-cards">
+    <article class="card">
+      <h3>Cadastro de Usuários</h3>
+      <a href="{{ url_for('register') }}" class="link">Cadastrar usuário →</a>
+    </article>
+    <article class="card">
+      <h3>Produtos</h3>
+      <a href="{{ url_for('products') }}" class="link">Gerenciar produtos →</a>
+    </article>
+  </section>
+{% endblock %}

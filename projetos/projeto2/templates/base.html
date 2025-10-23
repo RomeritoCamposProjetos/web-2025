@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{% block title %}Minha Loja{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="{{ url_for('index') }}">Minha Loja</a>
+      <nav class="main-nav" role="navigation" aria-label="Menu principal">
+        <a href="{{ url_for('index') }}">Início</a>
+        <a href="{{ url_for('products') }}">Produtos</a>
+        {% if current_user %}
+          <span class="muted">Olá, {{ current_user.email }}</span>
+          <a class="btn small" href="{{ url_for('logout') }}">Sair</a>
+        {% else %}
+          <a href="{{ url_for('login') }}">Entrar</a>
+          <a href="{{ url_for('register') }}">Cadastrar</a>
+        {% endif %}
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <div class="flash-area">
+          {% for category, msg in messages %}
+            <div class="flash {{ category }}">{{ msg }}</div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© {{ now().year if now is defined else "2025" }} - Projeto Flask + SQLAlchemy</small>
+    </div>
+  </footer>
+</body>
+</html>
